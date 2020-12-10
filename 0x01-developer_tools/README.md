@@ -1,0 +1,1 @@
+This is the readme of the dirextory 0x01-developer_tools
