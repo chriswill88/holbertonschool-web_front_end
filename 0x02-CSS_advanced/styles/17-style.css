@@ -37,7 +37,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     --section-header-padding: 0 0 3rem;
     --section-body-padding: 0 0 3rem;
     --section-footer-padding: 3rem 0 0;
-    /* --section-footer-align: center; */
+    --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
     
 }
@@ -98,7 +98,7 @@ a:active {
 
 .section-footer {
     padding: var(--section-footer-padding);
-    text-align: var(--section-footer-align);
+    /* text-align: var(--section-footer-align); */
 }
 
 .section-title {
