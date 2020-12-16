@@ -6,21 +6,8 @@
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
 
-    @font-face {
-        font-family: 'font-family-base';
-        src: url(Helvetica Neue);
-        src: url(Helvetica);
-        src: url(Arial);
-        src: url(sans-serif);
-    }
-
-    @font-face {
-        font-family: 'font-family-title';
-        src: url(Helvetica Neue);
-        src: url(Helvetica);
-        src: url(Arial);
-        src: url(sans-serif);
-    }
+    font-family: "font-family-base", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "font-family-title", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html {
