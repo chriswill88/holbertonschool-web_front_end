@@ -97,7 +97,7 @@ a:active {
 .containter {
     width: 960px;
     display: flex;
-    text-align: space-evenly;
+    justify-content: space-evenly;
 }
 
 h1, h2, h3, h4, h5, h6 {
