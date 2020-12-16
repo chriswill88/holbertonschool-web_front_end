@@ -88,7 +88,7 @@ a:active {
 }
 
 .section-header {
-    text-align: var(--section-header-align);
+    /* text-align: var(--section-header-align); */
     padding: var(--section-header-padding)
 }
 
