@@ -1,0 +1,19 @@
+/* task 8 */
+$left: 10px;
+$right: 10px;
+
+@mixin body-tags {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+body {
+    @include body-tags;
+}
+
+$left: 15px;
+$right: 15px;
+
+div {
+    @include body-tags;
+}
