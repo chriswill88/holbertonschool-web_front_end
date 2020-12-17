@@ -1,0 +1,19 @@
+/* task 9 */
+$color: #00FF00;
+
+.info {
+    font-size: 12px;
+}
+
+.success {
+    @extend .info;
+    color: $color;
+}
+
+$color: #FF0000;
+
+
+.warning {
+    @extend .info;
+    color: $color;
+}
