@@ -378,6 +378,9 @@
   }
 
   /*** 4. CARD ***/
+  .section-services .row {
+    flex-wrap: wrap;
+  }
   
   /* Card (all styles)
       ============================= */
