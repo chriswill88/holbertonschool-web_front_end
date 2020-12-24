@@ -202,7 +202,6 @@
       ============================= */
   
   .navbar-menu {
-    float: right;
   }
   
   .nav {
@@ -260,6 +259,12 @@
          position: relative;
          z-index: 3;
          background: transparent;
+  }
+  
+  .header-logo {
+  }
+  
+  .header-logo a {
   }
   
   /* Footer
