@@ -40,7 +40,6 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
     
-    
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
@@ -166,7 +165,7 @@ a {
 
 .nav .nav-link {
     display: block;
-    padding: .5rem 1rem;
+    padding: .5rem .5rem;
 }
 
 .nav .nav-link:hover {
