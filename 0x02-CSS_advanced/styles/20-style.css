@@ -202,10 +202,8 @@ ul.row {
     text-align: right;
 }
 
-.row::before {
-    display: none;
-}
 .row::after {
+    content: "";
     display: table;
-    float: none;
+    clear: both;
 }
