@@ -203,5 +203,7 @@ ul.row {
 }
 
 .row {
-    display: table-row;
+    display: none;
+    display: table;
+    float: none;
 }
