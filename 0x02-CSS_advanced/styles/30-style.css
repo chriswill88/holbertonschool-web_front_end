@@ -371,13 +371,13 @@ ul.row {
     position: relative;
 }
 
-.card-word .card-title a {
+.card-word.card-title a {
     display: block;
     text-decoration: none;
     padding-top: 45%;
 }
 
-.card-word .card-title a::after {
+.card-word.card-title a::after {
     position: absolute;
     top: 0;
     right: 0;
