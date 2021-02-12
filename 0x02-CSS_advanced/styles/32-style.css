@@ -423,6 +423,7 @@ ul.row {
 .button:hover {
     transition-duration: var(--transition-duration);
     transition-property: color;
+    transition-property: background-color;
 }
 
 .card-work:hover .card-image {
