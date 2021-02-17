@@ -17,3 +17,4 @@ function outer() {
     }
     inner();
 }
+outer()
