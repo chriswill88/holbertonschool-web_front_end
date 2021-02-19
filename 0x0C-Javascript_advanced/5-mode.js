@@ -16,7 +16,7 @@ function main () {
     textBox.appendChild(tb);
 
     spookMode = document.createElement('button');
-    spookMode.setAttribute('onclick', spooky);
+    spookMode.setAttribute('onclick', spooky());
     spm = document.createTextNode("Spooky");
     spookMode.appendChild(spm);
 
