@@ -6,29 +6,25 @@ function changeMode (size, weight, transform, background, color) {
     document.body.style.color = color;
 }
 
+let spooky = function () {changeMode(9, 'bold', 'uppercase', 'pink', 'green')};
+let darkMode = function () {changeMode(12, 'bold', 'capitalize', 'black', 'white')};
+let screamMode = function () {changeMode(12, 'normal', 'lowercase', 'white', 'black')};
+
 function main () {
-    let spooky = changeMode(9, 'bold', 'uppercase', 'pink', 'green');
-    let darkMode = changeMode(12, 'bold', 'capitalize', 'black', 'white');
-    let screamMode = changeMode(12, 'normal', 'lowercase', 'white', 'black');
- 
     textBox = document.createElement('p');
     tb = document.createTextNode("Welcome Holberton!");
     textBox.appendChild(tb);
 
-    spookMode = document.createElement('button');
-    spookMode.setAttribute('onclick', spooky());
-    spm = document.createTextNode("Spooky");
-    spookMode.appendChild(spm);
+    function buttonMaker(func, texty) {
+        button = document.createElement('button');
+        button.setAttribute('onclick', func);
+        button.appendChild(document.createTextNode(texty));
+        return button;
+    }
 
-    dMMode = document.createElement('button');
-    dMMode.setAttribute('onclick', darkMode());
-    dm = document.createTextNode("Dark mode");
-    dMMode.appendChild(dm);
+    spook = buttonMaker("spooky()", 'Spooky');
+    dark = buttonMaker("darkMode()", 'Dark mode');
+    scream = buttonMaker("screamMode()", 'Scream mode');
 
-    sMode = document.createElement('button');
-    sMode.setAttribute('onclick', screamMode());
-    sm = document.createTextNode("Scream mode");
-    sMode.appendChild(sm);
-
-    document.body.append(textBox, spookMode, dMMode, sMode);
+    document.body.append(textBox, spook, dark, scream);
 }
