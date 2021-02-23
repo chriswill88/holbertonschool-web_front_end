@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            let dict = {
+                'Guillaume': 'Salva',
+                'Arielle': 'Snizt',
+                'Fanette': 'Snizt',
+                'Gerard': 'Snizt',
+                'Victor': 'Salva'
+            }
+
+            function createFamilyTree() {
+                $('body').append($('<table>').append('<thead><tr><th>Firstname</th><th>Lastname</th></tr>', '<tbody>'))
+            }
+
+            function addNewMember(firstName, lastName, i) {
+                $('tbody').append(`<tr id=${i}><td>${firstName}</td> <td>${lastName}</td> <td class="clicky" id=${i}>(x)</td></tr>`)
+                $('.clicky').css("background-color", "orange").click(function() {
+                    $(`#${i}`).empty()
+                });
+            }
+
+            createFamilyTree()
+
+
+            for (let i = 0; i < Object.keys(dict).length; i++)
+            {
+                fn = Object.keys(dict)[i]
+                ln = dict[Object.keys(dict)[i]]
+                addNewMember(fn, ln, i);
+            }
+        </script>
+    </body>
+
+</html>
