@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Login to the website</h1>
+        <input id='firstname' type="text" value='Firstname'>
+        <input id='email' type="text" value='Email'>
+
+        <button id='set'>Log me in</button>
+        <h1>Cookies</h1>
+        <button id='show'>Show the cookies</button>
+
+        <script>
+            let set = document.querySelector('#set');
+            set.addEventListener('click', function (event) {
+                setCookies();
+            });
+
+            let show = document.querySelector('#show');
+            show.addEventListener('click', function (event) {
+                showCookies();
+            });
+
+            function setCookies() {
+                const d = new Date();
+                d.setTime(d.getTime() + (10*24*60*60*1000));
+                const expires = "expires="+ d.toUTCString();
+
+                fn = document.getElementById("firstname").value
+                el = document.getElementById("email").value
+
+                document.cookie = `firstname=${fn}; ${expires}`;
+                document.cookie = `email=${el}; ${expires}`;
+            }
+
+            function showCookies() {
+                div = document.createElement('div');
+                p = document.createElement('p').innerHTML = document.cookie;
+                div.append(p);
+                div.style.paddingTop = "25px";
+                document.body.appendChild(div);
+
+            }
+        </script>
+    </body>
+</html>

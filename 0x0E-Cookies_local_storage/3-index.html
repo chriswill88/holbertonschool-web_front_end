@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id='comp'>
+            <h1>Login to the website</h1>
+            <input id='firstname' type="text" value='Firstname'>
+            <input id='email' type="text" value='Email'>
+
+            <button id='set'>Log me in</button>
+            <!-- <h1>Cookies</h1>
+            <button id='show'>Show the cookies</button> -->
+        </div>
+
+        <script>
+            let set = document.querySelector('#set');
+            set.addEventListener('click', function (event) {
+                setCookies();
+                showWelcomeMessageOrForm()
+            });
+
+            // let show = document.querySelector('#show');
+            // show.addEventListener('click', function (event) {
+            //     showCookies();
+            // });
+
+            function setCookies() {
+                const d = new Date();
+                d.setTime(d.getTime() + (10*24*60*60*1000));
+                const expires = "expires="+ d.toUTCString();
+
+                fn = document.getElementById("firstname").value
+                el = document.getElementById("email").value
+
+                document.cookie = `firstname=${fn}; ${expires}`;
+                document.cookie = `email=${el}; ${expires}`;
+            }
+
+            // function showCookies() {
+            //     cookies = document.cookie;
+            //     cookies = cookies.replace("; ", " - ");
+            //     cookies = cookies.replace("firstname", "Firstname");
+            //     cookies = cookies.replace("email", "Email");
+            //     cookies = cookies.replaceAll("=", ": ");
+
+            //     div = document.createElement('div');
+            //     p = document.createElement('p').innerHTML = cookies;
+            //     div.append(p);
+            //     div.style.paddingTop = "25px";
+            //     document.body.appendChild(div);
+            // }
+
+            function getCookies(name) {
+                let cname = name + '=';
+                let dc = decodeURIComponent(document.cookie);
+                let ca = dc.split(';');
+
+                for(let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length + 1, c.length);
+                    }
+                }
+                return "";
+            }
+
+            // -------------------------------
+            function showform() {
+                document.getElementById("del").remove();
+                div = document.getElementById("comp");
+                div.style.display = "block";
+            }
+
+            function hideform() {
+                div = document.getElementById("comp");
+                div.style.display = "none";
+            }
+
+            function deleteCookiesAndShowForm() {
+                document.cookie = `firstname=${getCookies("firstname")}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+                document.cookie = `email=${getCookies("email")}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+                showform();
+            }
+
+            function showWelcomeMessageOrForm() {
+                console.log('in');
+                firstname = getCookies('firstname');
+                email = getCookies('email');
+
+                console.log(firstname, email);
+
+                h = document.createElement('h1');
+                h.setAttribute('id', 'del');
+                con = document.createTextNode(`Welcome: ${firstname}`);
+                h.appendChild(con);
+
+                a = document.createElement('a');
+                link = document.createTextNode("(logout)");
+
+                a.appendChild(link);
+                h.append(a);
+
+                a.style.fontWeight = 'normal';
+                a.style.paddingLeft = '10px';
+                a.style.fontStyle = 'italic';
+
+                if (firstname === '' && email === '') {
+                    h.remove();
+                    console.log('logged out');
+                    showform();
+                } else {
+                    document.body.append(h);
+                    hideform()
+                    a.addEventListener('click', function (event) {
+                        deleteCookiesAndShowForm();
+                    });
+                }
+            }
+
+            showWelcomeMessageOrForm();
+        </script>
+    </body>
+</html>

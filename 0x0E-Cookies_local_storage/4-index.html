@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    </head>
+    <body>
+        <div id='comp'>
+            <h1>Login to the website</h1>
+            <input id='firstname' type="text" value='Firstname'>
+            <input id='email' type="text" value='Email'>
+
+            <button id='set'>Log me in</button>
+            <!-- <h1>Cookies</h1>
+            <button id='show'>Show the cookies</button> -->
+        </div>
+
+        <script>
+            let set = document.querySelector('#set');
+            set.addEventListener('click', function (event) {
+                setCookiesAndShowWelcomeMessage()
+            });
+
+            // -------------------------------
+            function showform() {
+                document.getElementById("del").remove();
+                div = document.getElementById("comp");
+                div.style.display = "block";
+            }
+
+            function hideform() {
+                div = document.getElementById("comp");
+                div.style.display = "none";
+            }
+
+            function deleteCookiesAndShowForm() {
+                Cookies.remove(`firstname`, { path: '' });
+                Cookies.remove(`email`, { path: '' });
+                showform();
+            }
+
+            function showWelcomeMessageOrForm() {
+                firstname = Cookies.get('firstname');
+                email = Cookies.get('email');
+
+                h = document.createElement('h1');
+                h.setAttribute('id', 'del');
+                con = document.createTextNode(`Welcome: ${firstname}`);
+                h.appendChild(con);
+
+                a = document.createElement('a');
+                link = document.createTextNode("(logout)");
+
+                a.appendChild(link);
+                h.append(a);
+
+                a.style.fontWeight = 'normal';
+                a.style.paddingLeft = '10px';
+                a.style.fontStyle = 'italic';
+
+                if (firstname === undefined && email === undefined) {
+                    h.remove();
+                    showform();
+                } else {
+                    document.body.append(h);
+                    hideform()
+                    a.addEventListener('click', function (event) {
+                        deleteCookiesAndShowForm();
+                    });
+                }
+            }
+
+            function setCookiesAndShowWelcomeMessage() {
+                fn = document.getElementById("firstname").value;
+                el = document.getElementById("email").value;
+
+                Cookies.set('firstname', fn, { expires: 10 });
+                Cookies.set('email', el, { expires: 10 });
+
+                showWelcomeMessageOrForm();
+            }
+
+            showWelcomeMessageOrForm()
+        </script>
+    </body>
+</html>
