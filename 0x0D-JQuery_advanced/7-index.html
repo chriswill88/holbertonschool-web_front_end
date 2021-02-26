@@ -27,7 +27,7 @@
                 p1 = $('<p>').append(`<span>${id} - </span>`, `<b>${title}</b>`)
                 p2 = $('<p>').append(`${snippet}`)
 
-                $('body').append($('<ul>').append($('<li>').append(p1, p2)))
+                $('ul').append($('<li>').append(p1, p2))
             }
             let dater;
 
