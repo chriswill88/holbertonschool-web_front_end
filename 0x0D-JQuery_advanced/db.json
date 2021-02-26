@@ -1,160 +1,155 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "_method": "delete",
+      "id": 40
     },
     {
-      "title": "fd",
-      "author": "fffff",
-      "id": 2
+      "_method": "delete",
+      "id": 41
     },
     {
-      "title": "fd",
-      "author": "fffff",
-      "id": 3
+      "_method": "delete",
+      "id": 42
     },
     {
-      "title": "f",
-      "author": "f",
-      "id": 4
+      "_method": "delete",
+      "id": 43
     },
     {
-      "title": "",
-      "author": "",
-      "id": 5
+      "_method": "delete",
+      "id": 44
     },
     {
-      "title": "",
-      "author": "",
-      "id": 6
+      "_method": "delete",
+      "id": 45
     },
     {
-      "title": "",
-      "author": "",
-      "id": 7
+      "_method": "delete",
+      "id": 46
     },
     {
-      "title": "",
-      "author": "",
-      "id": 8
+      "_method": "delete",
+      "id": 47
     },
     {
-      "title": "",
-      "author": "",
-      "id": 9
+      "_method": "delete",
+      "id": 48
     },
     {
-      "title": "",
-      "author": "",
-      "id": 10
+      "_method": "delete",
+      "id": 49
     },
     {
-      "id": 11
+      "_method": "delete",
+      "id": 50
     },
     {
-      "id": 12
+      "_method": "delete",
+      "id": 51
     },
     {
-      "id": 13
+      "_method": "delete",
+      "id": 52
     },
     {
-      "id": 14
+      "_method": "delete",
+      "id": 53
     },
     {
-      "id": 15
+      "_method": "delete",
+      "id": 54
     },
     {
-      "id": 16
+      "_method": "delete",
+      "id": 55
     },
     {
-      "id": 17
+      "_method": "delete",
+      "id": 56
     },
     {
-      "id": 18
+      "_method": "delete",
+      "id": 57
     },
     {
-      "id": 19
+      "_method": "delete",
+      "id": 58
     },
     {
-      "title": "hoho",
-      "author": "lol",
-      "id": 20
+      "_method": "delete",
+      "id": 59
     },
     {
-      "title": "",
-      "author": "",
-      "id": 21
+      "_method": "delete",
+      "id": 60
     },
     {
-      "title": "woo",
-      "author": "she",
-      "id": 22
+      "_method": "delete",
+      "id": 61
     },
     {
-      "title": "enofne",
-      "author": "diid",
-      "id": 23
+      "_method": "delete",
+      "id": 62
     },
     {
-      "title": "waeafownef",
-      "author": "iaefowe",
-      "id": 24
+      "_method": "delete",
+      "id": 63
     },
     {
-      "title": "wnofeniweifoenoaw",
-      "author": "oweioae",
-      "id": 25
+      "_method": "delete",
+      "id": 64
     },
     {
-      "title": "soe",
-      "author": "abe",
-      "id": 26
+      "_method": "delete",
+      "id": 65
     },
     {
-      "title": "",
-      "author": "",
-      "id": 27
+      "_method": "delete",
+      "id": 66
     },
     {
-      "title": "",
-      "author": "",
-      "id": 28
+      "_method": "delete",
+      "id": 67
     },
     {
-      "title": "blio",
-      "author": "llnn",
-      "id": 29
+      "_method": "delete",
+      "id": 68
     },
     {
-      "title": "typicode",
-      "author": "json-server",
-      "id": 30
+      "_method": "delete",
+      "id": 69
     },
     {
-      "title": "bhbh",
-      "author": "jujbhbbb",
-      "id": 31
+      "_method": "delete",
+      "id": 70
     },
     {
-      "title": "hhhh",
-      "author": "bhhh",
-      "id": 32
+      "_method": "delete",
+      "id": 71
     },
     {
-      "title": "",
-      "author": "",
-      "id": 33
+      "_method": "delete",
+      "id": 72
+    },
+    {
+      "_method": "delete",
+      "id": 73
+    },
+    {
+      "_method": "delete",
+      "id": 74
+    },
+    {
+      "_method": "delete",
+      "id": 75
+    },
+    {
+      "_method": "delete",
+      "id": 76
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
